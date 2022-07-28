@@ -1,5 +1,6 @@
 ---
 title: uftrace를 사용한 분석 - vlc player
+author: Wendy
 categories: [Blogging, Uftrace]
 tags: [study]
 ---
@@ -7,10 +8,39 @@ tags: [study]
 
 ### VLC 빌드
 
-vlc player에 pg 옵션을 넣어 빌드하는 방법
+#### 소스 가져오기
+
+```console
+git clone https://github.com/videolan/vlc.git
+```
+
+#### 필요 패키지 설치
+
+WSL2 환경에서 다수의 패키지의 설치가 필요했다.
+bootstrap과 configure 단계에서 에러 발생시 다음의 사이트에서 검색해서 찾을 수 있었다.
+
+ubuntu 패키지 찾기 <https://packages.ubuntu.com/search?keywords=xcb&searchon=names&suite=jammy&section=all>
+
+
+./bootstrap 단계에서 설치한 패키지
+
+```console
+sudo apt install flex bison autopoint gettext libtool
+```
+./configure 단계에서 설치한 패키지 (--disable-qt 옵션 사용)
+```console
+sudo apt install lua5.2 liblua5.2-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev
+sudo apt install liba52-dev libxcb-composite0-dev libalsa-ocaml-dev
+sudo apt install libxcb-randr0-dev libxcb-shm0--dev libxcb-xkb-dev
+```
+
+#### vlc player 빌드
+
+vlc player에 pg 옵션을 넣어 빌드!
 ``` console
-	./configure --disable-qt CFLAGS="-pg"
-	./make 
+./bootstrap
+./configure --disable-qt CFLAGS="-pg"
+./make 
 ```
 
 ### UFTRACE를 이용한 VLC 분석
