@@ -12,7 +12,7 @@ GitHub 블로그의 페이지는 Github의 다른 문서와 동일하게 markdow
 Git repository에서 블로그도 소스처럼 관리하는데, 로컬에서도 먼저 확인해보 올릴 수 있다~
 jekyll 테마를 제공하는 사이트에서 맘에 드는 테마를 골라 사용! 
 
-Jekyll 이란?
+Jekyll 이란?  
 <https://en.wikipedia.org/wiki/Jekyll_(software)>  
 
 사용법은 공식 사이트와 테마의 가이드 문서가 가장 정확했다. (영어 독해가 바로 안됬을 뿐...)
@@ -38,21 +38,23 @@ Jekyll 이란?
 다음을 설치하고 실행하였다.
 
 - 환경 갖추기
-``` console
+```console
 sudo apt install ruby-bundler
 sudo apt install ruby-full build-essential zlib1g-dev
 sudo gem install jekyll
+```
 
+ blog 소스가 위치한 곳에서 실행
 
-< blog 소스가 위치한 곳에서 실행.>
+```console
 bundle install
 bundle add jekyll
 ```
 
-- 로컬 실행
-``` console
-bundle exec jekyll s
+- 로컬 서비스 실행
 
+```console
+bundle exec jekyll s
 ```
 
 
