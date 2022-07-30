@@ -115,19 +115,7 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 
 --> pick을 edit로 변경하고 저장 
 
-```console
-$ git rebase -i HEAD~1
 
-
-Stopped at c01b6eb9...  tests: Fix applying zero offset to null pointer in unittest
-You can amend the commit now, with
-
-  git commit --amend
-
-Once you are satisfied with your changes, run
-
-  git rebase --continue
-```
 
 2. 로컬에서 변경 진행하고 해당 파일을 git add 후 commit --amend 하기
 
