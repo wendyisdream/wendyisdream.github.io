@@ -25,13 +25,13 @@ ubuntu 패키지 찾기 <https://packages.ubuntu.com/search?keywords=xcb&searcho
 ./bootstrap 단계에서 설치한 패키지
 
 ```console
-sudo apt install flex bison autopoint gettext libtool
+sudo apt install flex bison autopoint gettext libtool autoconf
 ```
 ./configure 단계에서 설치한 패키지 (--disable-qt 옵션 사용)
 ```console
 sudo apt install lua5.2 liblua5.2-dev libavcodec-dev libavutil-dev libavformat-dev libswscale-dev
 sudo apt install liba52-dev libxcb-composite0-dev libalsa-ocaml-dev
-sudo apt install libxcb-randr0-dev libxcb-shm0--dev libxcb-xkb-dev
+sudo apt install libxcb-randr0-dev libxcb-shm0-dev libxcb-xkb-dev
 ```
 
 #### vlc player 빌드
