@@ -102,16 +102,9 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 ```console
  $git rebase -i HEAD수정할 commit의 순서
  pick a5c3307f tests: Fix applying zero offset to null pointer in unittest
- # Rebase 07332935..a5c3307f onto 07332935 1 command
-
- # Commands:
- # p, pick = use commit
- # r, reword = use commit, but edit the commit message
- # e, edit = use commit, but stop for amending
- # s, squash = use commit, but meld into previous commit
- # f, fixup = like "squash", but discard this commit's log message
- # x, exec = run command (the rest of the line) using shell
- # d, drop = remove commit
+ ...
+ r, reword = use commit, but edit the commit message
+ ...
 ```
 
 3. 수정 후 push  
