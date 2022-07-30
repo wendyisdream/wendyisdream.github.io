@@ -1,5 +1,5 @@
 ---
-title: uftrace 이슈 수정 - clang asan에서 applying zero offset to null pointer 에러 발생건
+title: clang asan으로 빌드 후 실행 시 applying zero offset to null pointer 에러 발생건
 categories: [Blogging, Uftrace]
 tags: [study]
 ---
