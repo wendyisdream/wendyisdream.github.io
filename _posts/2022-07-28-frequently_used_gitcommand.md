@@ -98,14 +98,8 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 2. rebase -i HEAD~<수정할 commit의 순서> (interactive 모드로 reword 모드로 변경) 
 처음 commit 수정의 경우 HEAD~1
 
-※ pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
-```console
- $git rebase -i HEAD수정할 commit의 순서
- pick a5c3307f tests: Fix applying zero offset to null pointer in unittest
- ...
- r, reword = use commit, but edit the commit message
- ...
-```
+ pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
+
 
 3. 수정 후 push  
 ```git push -f origin {branch-name}
