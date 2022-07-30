@@ -95,10 +95,10 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 ```git log
 ```
 
-2. rebase -i HEAD~<수정할 commit의 순서> (interactive 모드로 reword 모드로 변경) 
+2. rebase -i HEAD~{번호} (interactive 모드로 reword 모드로 변경)  
 처음 commit 수정의 경우 HEAD~1
 
- --> pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
+pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
 
 
 3. 수정 후 push  
@@ -113,7 +113,7 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 
 2. pick을 edit로 변경
 
---> pick을 edit로 변경하고 저장 
+pick을 edit로 변경하고 저장 
 
 
 
