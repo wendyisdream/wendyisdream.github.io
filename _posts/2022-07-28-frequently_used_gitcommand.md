@@ -95,12 +95,12 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 ```git log
 ```
 
-2. rebase -i HEAD~{번호} (interactive 모드로 reword 모드로 변경)  
+2. rebase -i HEAD~# (interactive 모드로 reword 모드로 변경)  
 처음 commit 수정의 경우 HEAD~1  
 pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
 
 ```console
- $git rebase -i HEAD수정할 commit의 순서
+ $git rebase -i HEAD~{수정할 commit의 순서}
  pick a5c3307f tests: Fix applying zero offset to null pointer in unittest
  # Rebase 07332935..a5c3307f onto 07332935 1 command
 
@@ -126,8 +126,33 @@ pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
 
 2. pick을 edit로 변경
 
-pick을 edit로 변경하고 저장 
+※ pick을 edit로 변경하고 저장
 
+```console
+$ git rebase -i HEAD~{수정할 commit의 순서}
+pick a5c3307f tests: Fix applying zero offset to null pointer in unittest
+
+# Rebase 07332935..a5c3307f onto 07332935 (1 command)
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+
+Stopped at c01b6eb9...  tests: Fix applying zero offset to null pointer in unittest
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+```
 
 
 2. 로컬에서 변경 진행하고 해당 파일을 git add 후 commit --amend 하기
