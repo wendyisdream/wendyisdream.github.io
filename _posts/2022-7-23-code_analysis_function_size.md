@@ -9,7 +9,7 @@ uftrace에서 report/graph/tui 에서 사용되는 data structure 파악을 위�
 
  
 
-![이미지](https://wendyisdream.github.io/images/data_structures.png "uftrace data structures")
+![이미지](https://wendyisdream.github.io/assets/img/data_structures.png "uftrace data structures")
 
 
 
