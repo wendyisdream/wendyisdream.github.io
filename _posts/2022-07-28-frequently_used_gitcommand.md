@@ -95,9 +95,9 @@ git fetch는 target branch로 부터 commit history를 가져온다. 이때 로�
 ```git log
 ```
 
-2. rebase -i HEAD~#  
-처음 commit 수정의 경우 HEAD~1  
-pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
+2. 해당 커밋을 commit 메시지 수정 모드로 변경  
+git rebase -i HEAD~{수정할 commit의 위치번호}  
+ --> pick을 <strong>reword</strong>로 변경하고 저장하면 변경하는 화면 나옴
 
     ```console
     $git rebase -i HEAD~{수정할 commit의 순서}
@@ -124,8 +124,9 @@ pick을 reword로 변경하고 저장하면 변경하는 화면 나옴
 ```git log
 ```
 
-2.  rebase -i HEAD~#  
-pick을 edit로 변경하고 저장
+2. 해당 커밋을 내용 수정 모드로 변경  
+git rebase -i HEAD~{수정할 commit의 위치번호}  
+ --> pick을 <strong>edit</strong>로 변경하고 저장
 
     ```console
     $ git rebase -i HEAD~{수정할 commit의 순서}
