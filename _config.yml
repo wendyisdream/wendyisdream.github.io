@@ -90,6 +90,11 @@ avatar: './assets/img/private/avatar_wendy.png'
 # boolean type, the global switch for ToC in posts.
 toc: true
 
+gems: [jekyll-mermaid]
+
+mermaid:
+  src: '/home/jia/node_modules/mermaid/dist/mermaid.js'
+
 comments:
   active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
@@ -201,3 +206,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+
